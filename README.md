@@ -158,13 +158,11 @@ All problem reports must be accompanied by a proper definition.
 This should include how the problem occurred, the command line and
 output from the miner showing the startup and any errors.
 
-Donations
+Simple Linux Build
 ---------
 
-cpuminer-opt has no fees of any kind but donations are accepted.
-
- BTC: 3A4tmufE1PGs3J6o3jNsUsvSP4DXEpkUMm  
- ETH: 0x3D611f37ec87e7e6150458E5DE802c2fa7dCef4a
-
-Happy mining!
-
+```
+./autogen.sh
+CFLAGS="-O3 -march=native -Wall" ./configure --with-curl
+make
+```
