@@ -139,8 +139,10 @@ bool register_yespower_algo( algo_gate_t* gate )
 
 bool register_yespowerRXTC_algo( algo_gate_t* gate )
 {
+    register_json_rpc2( gate );
     paramsType = YESPOWER_PARAMS_TORQUE;
-    return register_yespower_algo(gate);
+    register_yespower_algo(gate);
+    return true;
 }
 
 bool register_yespower05r16_algo( algo_gate_t* gate )
